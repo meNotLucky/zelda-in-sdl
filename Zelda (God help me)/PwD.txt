@@ -1,0 +1,26 @@
+- Advanced Features -
+
+No Memory Leaks
+The game in its currrent state has no memory leaks, it handles all the data on the heap well and deletes it when it's it no longer has a purpouse.
+Spread across most files.
+
+Animations
+The abilty to play animation of sprites with 4 parts.
+The animation can be set on a loop, or played once and return a false bool when finished to trigger events.
+Can be found in Animation.h, Animation.cpp, and SpriteManager.cpp, and is seen used in most files.
+(The sprites themselves can be found in the Sprites folder)
+
+Artificial intelegence
+While not the greatest AI, it does what it's supposed to do (Most of the time).
+It has three things that it does: First it spawnes, then it moves, and when it finds a new direction, it fires a projectile.
+It does also despawn, bu that's mainly handled by the Level and not the AI.
+Can be found in Enemy.cpp.
+
+Data driven entity creation
+The Tile data for the levels are gathered from .txt files found in the Data folder.
+In the Level.h and Level.cpp you can see it be imported and put into a map.
+
+"Show me what you got"
+I guess this would be the WorldManager that handles the Switching Between the levels.
+It's not too complicated, but I think the feature is very neat and it was really fun to do.
+Can be found in WorldManager.h and WorldManager.cpp as well as the Level.cpp.
