@@ -8,6 +8,14 @@ WorldManager::WorldManager(int starting_level) {
 	do_switch = false;
 }
 
+WorldManager::~WorldManager()
+{
+	for (auto it = levels.begin(); it != levels.end(); it++) {
+		it->second.delete_level();
+		levels.erase(it);
+	}
+}
+
 void WorldManager::add_level(int p_level_id, LevelType p_level_type, int pos_x, int pos_y, int enemy_amount, EnemyType e_type, bool render_level)
 {
 	Level new_level(p_level_id, p_level_type, pos_x, pos_y, enemy_amount, e_type, render_level);
@@ -46,6 +54,8 @@ bool WorldManager::on_player_death(SDL_Renderer* p_renderer, Player * player)
 	render_world(p_renderer);
 	if(player->animation_finished())
 		return true;
+
+	return false;
 }
 
 void WorldManager::update_world(Player* player)

@@ -89,6 +89,13 @@ Level::Level(int p_level_id, LevelType p_level_type, int pos_x, int pos_y, int e
 	}
 }
 
+void Level::delete_level()
+{
+	for (auto it = tiles.begin(); it != tiles.end(); it++) {
+		it->second.destroy_collider();
+	}
+}
+
 void Level::spawn_enemies()
 {
 	for (auto it = enemies.begin(); it != enemies.end(); it++) {
@@ -105,9 +112,8 @@ Tile* Level::create_spawn_point()
 	if (tiles[rand].get_type() != WALL) {
 		return &tiles[rand];
 	}
-	else if (tiles[rand].get_type() == WALL) {
-		create_spawn_point();
-	}
+
+	return create_spawn_point();
 }
 
 void Level::despawn_enemies()

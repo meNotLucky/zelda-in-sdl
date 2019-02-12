@@ -57,7 +57,7 @@ int main() {
 
 		while (system.running == true) {
 
-			srand(time(NULL));
+			srand((unsigned int)time(NULL));
 
 			// System updates
 			system.update();

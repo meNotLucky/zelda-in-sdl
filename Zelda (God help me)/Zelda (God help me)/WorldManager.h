@@ -19,6 +19,7 @@ class WorldManager {
 public:
 	WorldManager() {};
 	WorldManager(int starting_level);
+	~WorldManager();
 	void add_level(int p_level_id, LevelType p_level_type, int pos_x, int pos_y, int enemy_amount, EnemyType e_type, bool render_level);
 	void switch_level(int current_level_id, int new_level_id, SwitchDirection dir);
 	void enter_cave_level(Player* player);

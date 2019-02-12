@@ -15,20 +15,6 @@ UsierInterface::UsierInterface()
 	hearts_5_rect.x = 766; hearts_5_rect.y = 171; hearts_5_rect.w = 15; hearts_5_rect.h = 33;
 	hearts_6_rect.x = 781; hearts_6_rect.y = 171; hearts_6_rect.w = 15; hearts_6_rect.h = 33;
 
-	heart_1 = Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_1.png", 0, 0, 15, 33);
-	heart_2 = Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_2.png", 0, 0, 15, 33);
-	heart_3 = Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_1.png", 0, 0, 15, 33);
-	heart_4 = Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_2.png", 0, 0, 15, 33);
-	heart_5 = Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_1.png", 0, 0, 15, 33);
-	heart_6 = Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_2.png", 0, 0, 15, 33);
-
-	m_hearts.push_back(heart_1);
-	m_hearts.push_back(heart_2);
-	m_hearts.push_back(heart_3);
-	m_hearts.push_back(heart_4);
-	m_hearts.push_back(heart_5);
-	m_hearts.push_back(heart_6);
-
 	m_rects.push_back(hearts_1_rect);
 	m_rects.push_back(hearts_2_rect);
 	m_rects.push_back(hearts_3_rect);
@@ -36,7 +22,20 @@ UsierInterface::UsierInterface()
 	m_rects.push_back(hearts_5_rect);
 	m_rects.push_back(hearts_6_rect);
 
+	m_hearts.push_back(Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_1.png", 0, 0, 15, 33));
+	m_hearts.push_back(Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_2.png", 0, 0, 15, 33));
+	m_hearts.push_back(Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_1.png", 0, 0, 15, 33));
+	m_hearts.push_back(Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_2.png", 0, 0, 15, 33));
+	m_hearts.push_back(Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_1.png", 0, 0, 15, 33));
+	m_hearts.push_back(Service<SpriteManager>::Get()->create_sprite("Assets/Sprites/UI/heart_2.png", 0, 0, 15, 33));
+
 	current_health = 6;
+}
+
+UsierInterface::~UsierInterface()
+{
+	delete m_sword;
+	m_sword = nullptr;
 }
 
 void UsierInterface::render(SDL_Renderer * p_renderer)

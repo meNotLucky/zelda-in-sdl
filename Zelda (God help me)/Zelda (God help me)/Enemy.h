@@ -24,8 +24,8 @@ class Enemy : public GameObject {
 	EnemyType enemy_type;
 	MovingDirection dir;
 
-	float speed_x;
-	float speed_y;
+	int speed_x;
+	int speed_y;
 
 	float timer_1;
 
@@ -51,6 +51,12 @@ class Enemy : public GameObject {
 public:
 	Enemy() {};
 	Enemy(int spawn_x, int spawn_y, EnemyType e_type);
+	//~Enemy() {
+	//	if (m_collider != nullptr) {
+	//		delete m_collider;
+	//		m_collider = nullptr;
+	//	}
+	//};
 	void render(SDL_Renderer* p_renderer);
 	bool get_new_move(MovingDirection move_dir_1, MovingDirection move_dir_2);
 	void fire_projectile(MovingDirection dir);

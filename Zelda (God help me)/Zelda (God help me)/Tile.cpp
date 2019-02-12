@@ -106,3 +106,9 @@ bool Tile::has_pos(int x, int y)
 	else
 		return false;
 }
+
+void Tile::destroy_collider()
+{
+	delete m_collider;
+	m_collider = nullptr;
+}

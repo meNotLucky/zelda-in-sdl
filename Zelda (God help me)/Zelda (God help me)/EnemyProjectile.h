@@ -17,6 +17,7 @@ class EnemyProjectile : public GameObject {
 public:
 	EnemyProjectile() {};
 	EnemyProjectile(int p_x, int p_y, FireDirection p_dir);
+	~EnemyProjectile() { if (m_collider != nullptr) { delete m_collider; m_collider = nullptr; } };
 	void render(SDL_Renderer* p_renderer);
 	void update();
 };

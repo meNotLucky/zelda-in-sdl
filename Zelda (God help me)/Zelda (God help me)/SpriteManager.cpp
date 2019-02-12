@@ -19,7 +19,15 @@ SpriteManager::~SpriteManager()
 		delete sprite;
 		sprite = nullptr;
 	}
+
 	m_sprites.clear();
+
+	for (Animation* animation : m_animations) {
+		delete animation;
+		animation = nullptr;
+	}
+
+	m_animations.clear();
 
 	for (auto pair : m_textures) {
 		SDL_DestroyTexture(pair.second);

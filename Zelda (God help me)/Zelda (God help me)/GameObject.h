@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Sprite.h"
+#include "Collider.h"
 
-struct Collider;
 struct SDL_Renderer;
 
 enum ObjectType {
@@ -33,7 +33,7 @@ protected:
 
 	// Object sprite
 	Sprite* m_sprite;
-	Collider* m_collider;
+	Collider* m_collider = nullptr;
 
 public:
 	virtual ~GameObject() {};

@@ -51,4 +51,5 @@ public:
 	void update_level(Player* player);
 	void disable_hitboxes(bool disable);
 	void check_collisions(bool check) { check_collision = check; };
+	void delete_level();
 };

@@ -16,8 +16,8 @@ class Player : public GameObject {
 
 	// Properties
 	int m_health;
-	float speed_x;
-	float speed_y;
+	int speed_x;
+	int speed_y;
 
 	// Checks
 	bool aquired_sword;
@@ -63,6 +63,7 @@ class Player : public GameObject {
 
 public:
 	Player();
+	~Player() { if (m_collider != nullptr) { delete m_collider; m_collider = nullptr; } };
 	void render(SDL_Renderer* p_renderer);
 	void update();
 	void move_rect(int x, int y);

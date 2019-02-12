@@ -389,6 +389,9 @@ void Enemy::on_collision(GameObject * p_other)
 
 		if (p_other->get_type() == PLAYER) {
 			is_dead = true;
+			m_active = false;
+			delete m_collider;
+			m_collider = nullptr;
 		}
 	}
 }

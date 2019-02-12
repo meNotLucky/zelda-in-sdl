@@ -33,4 +33,6 @@ public:
 	void disable_hitbox(bool disable);
 	Collider* get_collider() { return m_collider; };
 	bool has_pos(int x, int y);
+
+	void destroy_collider();
 };
