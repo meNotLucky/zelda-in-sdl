@@ -1,3 +1,14 @@
+/*
+
+AUDIO MANAGER
+
+The Audio Manager, much like the Sprite Manager, is used to store and re-use loaded files. In this case audio files.
+It uses the SDL Chunks to store sound snippets and SDL Music to store music.
+
+It was created to make sure all audio files just had to be loaded once, and then could be re-used whenever.
+
+*/
+
 #pragma once
 
 #include <map>
@@ -24,7 +35,6 @@ public:
 	void play_music(int p_loops);
 };
 
-// TODO: Implement Music (Mix_Music, Mix_LoadMUS)
 class AudioManager {
 	std::map<const char*, Mix_Chunk*> m_chunks;
 	std::map<const char*, Mix_Music*> m_tracks;

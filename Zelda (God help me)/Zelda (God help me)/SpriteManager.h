@@ -1,3 +1,16 @@
+/*
+
+SPRITE MANAGER
+
+The sprite manager is used to add and re-use sprites, animation and text in the game.
+It uses the SDL textures and stores them in a map. Depending on what type of object was created (Sprite, Animation or Text),
+it will be rendered in a different way.
+
+This was created to make sure no sprites had to be added more than once and take up more space.
+It also gives a simple way of giving a game object a texture or animation.
+
+*/
+
 #pragma once
 
 #include <map>

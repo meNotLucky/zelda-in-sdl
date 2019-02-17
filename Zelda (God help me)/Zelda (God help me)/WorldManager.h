@@ -1,3 +1,20 @@
+/*
+
+WORLD MANAGER
+
+This system is used for generating and handeling the game world that you play in.
+It renders and updates the levels it contains and switches between them seamlessly, just like in the original game.
+
+The levels themselves are generated from a data file which contains data for tthe different tiles.
+Each level has its own position in the world, and its own set of enemies.
+
+It was designed like this to easely add and switch between levels during game developement.
+With this system, all you need to do is create a data file and call it 'level_[ID]', so for example "level_2.txt".
+Then, to add the level into the game, you just have to add it to the world manager using the 'add_level' function,
+and give it the same ID as in the name of the data file, specify the type of level, the position and enemies.
+
+*/
+
 #pragma once
 
 #include <map>

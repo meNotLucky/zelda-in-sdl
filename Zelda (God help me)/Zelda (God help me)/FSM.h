@@ -1,3 +1,15 @@
+/*
+
+FINITE STATE MACHINE
+
+The Finite State Machine is used to create and store different game states (for example the main menu, options, the game itself etc).
+Each state has an ID, and contains the ID of the next state that the game should load after the current one.
+
+The purpouse of this system is to easely switch between different parts of the game itself,
+without having to worry about what to change in the update functions as only the only updates that are run are the ones of the currently loaded state.
+
+*/
+
 #pragma once
 
 #include <vector>
