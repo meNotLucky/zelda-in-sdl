@@ -1,0 +1,29 @@
+﻿  Animation.cpp
+  Collider.cpp
+  CollisionManager.cpp
+  Death.cpp
+  Enemy.cpp
+  EnemyProjectile.cpp
+  Fire.cpp
+  FSM.cpp
+  Game.cpp
+  InputManager.cpp
+  KeyStrokes.cpp
+  Level.cpp
+  main.cpp
+  MainMenu.cpp
+  AudioManager.cpp
+  OldMan.cpp
+  Player.cpp
+  Sprite.cpp
+  SpriteManager.cpp
+  Sword.cpp
+  Compiling...
+  SystemManager.cpp
+  Tile.cpp
+  UserInterface.cpp
+  WorldManager.cpp
+  Generating code
+  All 1604 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Zelda (God help me).vcxproj -> C:\Users\Lukas\source\repos\Zelda\Zelda (God help me)\Builds\Release\Zelda (God help me).exe
