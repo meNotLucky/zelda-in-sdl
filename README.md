@@ -1,6 +1,6 @@
 # The Legend of Zelda for the NES recreated in C++ using SDL
 
-This is a school project from the first year of Game design and programming at Upsala University.
+This is a school project from the first year of Game design and programming at Uppsala University.
 The specific course is Game Programming 1.
 
 The task was to recreate a classic game in about a month, although since the assignement overlapped the holidays I only worked on
